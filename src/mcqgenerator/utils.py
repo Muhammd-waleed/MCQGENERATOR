@@ -1,5 +1,5 @@
 import os
-# from PyPDF2 import PdfFileReader
+from PyPDF2 import PdfFileReader
 import json
 import traceback
 
@@ -8,22 +8,22 @@ import traceback
 
 
 def  read_file(file):
-    pass
-    # if file.name.endswith(".pdf"):
-    #     try:
-    #         pdf_reader=PdfFileReader(file)
-    #         text=""
-    #         for page in pdf_reader.pages:
-    #             text+=page.extract_text()
-    #         return text
-    #     except Exception as e:
-    #         raise Exception("Error While Reagding the File")
-    # elif file.name.endswith(".txt"):
-    #     return file.read().decode("utf-8")
-    # else:
-    #     raise Exception(
-    #         "Only Support Pdf and text file"
-    #     )
+    
+    if file.name.endswith(".pdf"):
+        try:
+            pdf_reader=PdfFileReader(file)
+            text=""
+            for page in pdf_reader.pages:
+                text+=page.extract_text()
+            return text
+        except Exception as e:
+            raise Exception("Error While Reagding the File")
+    elif file.name.endswith(".txt"):
+        return file.read().decode("utf-8")
+    else:
+        raise Exception(
+            "Only Support Pdf and text file"
+        )
     
 
 
