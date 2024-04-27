@@ -16,7 +16,7 @@ from langchain.callbacks import get_openai_callback
 import streamlit as st
 st.set_page_config(page_title="MCQ Generator") 
 #loading json file
-with open("E:\mcqgen\Response.json","r") as file:
+with open("Response.json","r") as file:
     RESPONSE_JSON=json.load(file)
 
  
