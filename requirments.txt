@@ -1,8 +1,13 @@
 google-generativeai
+langchain_community
 langchain
 streamlit
+<<<<<<< HEAD
 python-dotenv
 
+=======
+PyPDF2
+>>>>>>> f3a6df247a541bd11b0095509057bb1e90f0c39a
 
 
 -e .
