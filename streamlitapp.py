@@ -3,7 +3,6 @@ import json
 import pandas as pd 
 import traceback
 
-# from dotenv import load_dotenv
 from src.mcqgenerator.logger import logging
 from src.mcqgenerator.utils import read_file ,get_table_data
 from src.mcqgenerator.MCQGENERATOR import generate_evaluate_chain
@@ -15,7 +14,7 @@ from langchain.chains import SequentialChain
 from langchain.callbacks import get_openai_callback
  
 import streamlit as st
-st.set_page_config(page_title="Your App Title") 
+st.set_page_config(page_title="MCQ Generator") 
 #loading json file
 with open("E:\mcqgen\Response.json","r") as file:
     RESPONSE_JSON=json.load(file)
